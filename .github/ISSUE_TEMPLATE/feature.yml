@@ -1,0 +1,53 @@
+name: Feature task
+description: Define one focused ShiftReady feature task
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What user problem must this task solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: List what this branch will include.
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: List nearby work that this branch must not include.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use clear, testable outcomes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and affected areas
+      description: Include permissions, data, UX, migrations, or regression risk.
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Required verification
+      value: |
+        - npm run check
+        - git diff --check
+        - Manual:
+    validations:
+      required: true
