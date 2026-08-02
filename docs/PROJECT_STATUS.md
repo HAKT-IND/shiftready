@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Foundation setup.
+Application foundation.
 
 ## Completed
 
@@ -18,41 +18,67 @@ Foundation setup.
   - JHA
   - Timesheet
   - Desktop administration
-- Agent governance and engineering safeguards prepared
+- Agent governance and engineering safeguards
+- Mobile-first application shell
+- Dashboard foundation
+- Route navigation for:
+  - Dashboard
+  - Forms
+  - Prestarts
+  - Take 5
+  - JHA
+  - Timesheets
+  - Handovers
+  - Completed Forms
+  - Activity
+  - Profile
+- Not-found route
+
+## Current app-shell scope
+
+The current pages establish navigation, layout, responsive styling, and route placeholders only.
+
+They do not yet include:
+
+- Supabase
+- Authentication
+- Real data
+- Functional safety forms
+- Administration
+- Final dashboard content
 
 ## Next recommended task
 
-Add the application shell and routing foundation.
+Add Supabase authentication and protected routes.
 
 Suggested task contract:
 
 ```text
 Goal:
-Create the ShiftReady application shell and route structure.
+Add ShiftReady authentication and protect the application shell.
 
 In scope:
-- Shared application layout
-- Routes and placeholder pages
-- Dashboard
-- Prestarts
-- Take 5
-- JHA
-- Timesheets
-- Completed Forms
-- Not-found page
+- Supabase browser client
+- Session provider
+- Login page
+- Sign in and sign out
+- Protected app routes
+- Loading and authentication error states
+- Safe environment validation
 
 Out of scope:
-- Supabase
-- Authentication
-- Functional forms
-- Admin functionality
-- Final visual polish
+- Invitations
+- User administration
+- Role-based permissions
+- Database schema beyond what authentication requires
+- Password reset flow
 
 Acceptance criteria:
-- All routes render
-- Navigation works
-- Mobile layout is usable
-- Unknown routes show a useful page
-- No console errors
+- Signed-out users see the login page
+- Valid users can sign in
+- Authenticated users can access the app shell
+- Users can sign out
+- Sessions survive a refresh
+- Missing configuration fails clearly
 - Lint and production build pass
 ```
